@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="view"
+            type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.finter.india.design.party.add.adapter.PartyAddDocumentData" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_white_1000"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_result_doc_ext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/offset_16"
+                android:layout_marginEnd="@dimen/offset_16"
+                android:layout_marginBottom="@dimen/offset_16"
+                android:background="@drawable/tb_doc_picker_dr_rect_round_red_doc_background"
+                android:gravity="center"
+                android:padding="@dimen/offset_6"
+                android:text="@{viewModel.extension}"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/font_12"
+                app:srcCompat="@drawable/tb_doc_picker_ic_icon_folder"
+                tools:text="pdf" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/item_result_doc_name"
+                    style="@style/TextTitle"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:tag="@{viewModel.id}"
+                    android:text="@{viewModel.attachment_name}"
+                    android:textColor="@color/md_grey_900"
+                    tools:hint="Doc Name" />
+
+                <ImageView
+                    android:id="@+id/ivItemResultDetailsDownload"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:background="@drawable/download" />
+
+                <ImageView
+                    android:id="@+id/ivItemResultView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:background="@drawable/hide_password"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>

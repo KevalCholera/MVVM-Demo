@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "320780907470",
+    "project_id": "finter-564df",
+    "storage_bucket": "finter-564df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320780907470:android:73b8478e58d8e46854319f",
+        "android_client_info": {
+          "package_name": "com.finter.india"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320780907470-kvaminqdg1d4jqq3jp3t8kjcppupa95i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ664SrPyNiHBUfACSzjev6G9na2RWX2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320780907470-kvaminqdg1d4jqq3jp3t8kjcppupa95i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_invoice_details_update"
+        android:title="@string/update"
+        android:visible="true" />
+    <item
+        android:id="@+id/menu_invoice_details_share_link_without"
+        android:title="@string/share_pdf"
+        android:visible="true" />
+    <item
+        android:id="@+id/menu_invoice_details_pdf_without"
+        android:title="@string/download_pdf"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/menu_invoice_details_delete"
+        android:title="@string/delete" />
+
+</menu>

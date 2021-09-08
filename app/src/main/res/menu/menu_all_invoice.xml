@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_customer_details_update"
+        android:title="@string/update" />
+    <item
+        android:id="@+id/menu_invoice_details_pdf"
+        android:title="@string/download_pdf"
+        android:visible="false" />
+
+</menu>

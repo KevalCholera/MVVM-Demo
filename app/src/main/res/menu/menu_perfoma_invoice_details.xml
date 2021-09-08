@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_invoice_details_update"
+        android:title="@string/update"
+        android:visible="true" />
+    <item
+        android:id="@+id/menu_invoice_details_share_link"
+        android:title="@string/share_pdf"
+        android:visible="true" />
+    <item
+        android:id="@+id/menu_invoice_details_pdf"
+        android:title="@string/download_pdf"
+        android:visible="true" />
+    <item
+        android:id="@+id/menu_invoice_details_duplicate"
+        android:title="@string/duplicate_invoice"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_invoice_details_delete"
+        android:title="@string/delete" />
+    <item
+        android:id="@+id/menu_invoice_details_credit_note"
+        android:title="@string/credit_note"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_invoice_details_payments"
+        android:title="@string/payments"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_invoice_details_challan"
+        android:title="@string/print_delivery_challan"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_invoice_details_slip"
+        android:title="@string/print_packing_slip"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_invoice_details_perfoma"
+        android:title="@string/make_invoice"
+        android:visible="false" />
+
+</menu>

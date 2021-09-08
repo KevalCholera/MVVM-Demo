@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="employeeDetailsViewModel"
+            type="com.finter.india.design.employee.details.EmployeeDetailsViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="@color/finter_red"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp25"
+                    android:paddingEnd="@dimen/dp25"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivSalesPersonDetailsBack"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:onClick="onBackClick"
+                        android:src="@drawable/ic_arrow_back" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/employee_details"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_18"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivSalesPersonDetailsEdit"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:onClick="popUpMenu"
+                        android:src="@drawable/invoice_three_dots" />
+
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nscSalesPersonDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:gone="@{!employeeDetailsViewModel.visibility}">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@{employeeDetailsViewModel.employeeDetailsResponse.response.data.name}"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            tools:text="@string/mr_jasmin_kanani" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:gravity="center"
+                            android:text="@{`#E `+employeeDetailsViewModel.employeeDetailsResponse.response.data.eid_no}"
+                            android:textColor="@color/white"
+                            tools:text="#E 1" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:layout_marginEnd="@dimen/dp15"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp20">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/email_id"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_12" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:text="@{employeeDetailsViewModel.employeeDetailsResponse.response.data.email !=`` ?employeeDetailsViewModel.employeeDetailsResponse.response.data.email : `No Email Address`}"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_12"
+                                        tools:text="@string/info_gmail_com" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/mobile"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_12" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:text="@{`+91 `+employeeDetailsViewModel.employeeDetailsResponse.response.data.contact_no}"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_12"
+                                        tools:text="@string/_91_7854123690" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/government_id_no"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_12" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:text="@{employeeDetailsViewModel.employeeDetailsResponse.response.data.id_no != `` ? employeeDetailsViewModel.employeeDetailsResponse.response.data.id_no : `No Government Data`}"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_12"
+                                        tools:text="ckjekfek45454" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp15"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp20">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/address"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_12" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@{employeeDetailsViewModel.employeeDetailsResponse.response.data.name.toString()}"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_12"
+                                    android:textStyle="bold"
+                                    tools:text="@string/mr_jasmin_kanani" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@{employeeDetailsViewModel.employeeDetailsResponse.response.data.address_1.toString() + `, ` + employeeDetailsViewModel.employeeDetailsResponse.response.data.address_2 + `\n ` + employeeDetailsViewModel.employeeDetailsResponse.response.data.city.toString()+ `, ` + employeeDetailsViewModel.employeeDetailsResponse.response.data.state_name.toString()+ `\n ` + employeeDetailsViewModel.employeeDetailsResponse.response.data.country_name.toString() + ` - `+employeeDetailsViewModel.employeeDetailsResponse.response.data.pin_code}"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_12"
+                                    tools:text="@string/_102_akash_complex_m_g_road_ahmedabad" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvEmployeeDetailsDocument"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp20"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp20">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/documents"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black_overlay_new"
+                                    android:textSize="@dimen/font_12" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rcEmployeeDetailsAttachment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:listitem="@layout/item_result_details" />
+
+                                <TextView
+                                    android:id="@+id/tvEmployeeDetailsAttachmentList"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:minHeight="@dimen/dp50"
+                                    android:text="@string/no_documents_attached_"
+                                    android:textColor="@color/finter_red"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressSalesPerson"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/progress_bar_color"
+                app:gone="@{!employeeDetailsViewModel.loading}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:toast="@{employeeDetailsViewModel.toastLiveData}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

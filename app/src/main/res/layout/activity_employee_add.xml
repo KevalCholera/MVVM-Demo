@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vieModel"
+            type="com.finter.india.design.employee.add.EmployeeAddViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/finter_red"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp25"
+            android:paddingEnd="@dimen/dp25"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:onClick="onBackClick"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/tvSalesPersonAddHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/add_accountant"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_20"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivEmployeeAddSave"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:onClick="onClickEmployee"
+                android:src="@drawable/right_tick_white" />
+
+        </LinearLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/finter_basic_background_color">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp15"
+                             android:layout_marginEnd="@dimen/dp15"
+                            android:text="@string/employee_name_"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/enter_employee_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="50"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp20"
+                                android:text="@={vieModel.salesPersonName}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="@string/employee_id_card_no"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/ab1234"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp20"
+                                android:text="@={vieModel.salesPersonNo}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="@string/government_id_no"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/government_id_no"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="20"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp20"
+                                android:text="@={vieModel.govIdNo}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="@string/mobile_number_"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp20">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/dp10"
+                                    android:text="@={vieModel.countryCode}"
+                                    android:textColor="@color/black"
+                                    tools:text="+91" />
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:hint="@string/enter_contact_no"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:text="@={vieModel.mobileNo}"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_16" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="@string/email_address"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/email_address"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="50"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp20"
+                                android:text="@={vieModel.emailId}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="@string/residence_address_"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/address_line_1"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="50"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp20"
+                                android:text="@={vieModel.addressLine1}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/address_line_2_optional_field"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="50"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp20"
+                                android:text="@={vieModel.addressLine2}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="@string/city_"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/city"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="50"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp20"
+                                android:text="@={vieModel.city}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_16" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="@string/state_"
+                            android:textColor="@color/finter_red"
+                            android:textSize="@dimen/font_14" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvEmployeeAddState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:onClick="stateListClick"
+                            card_view:cardBackgroundColor="@android:color/white"
+                            card_view:cardCornerRadius="8dp"
+                            card_view:cardElevation="4dp"
+                            tools:ignore="MissingConstraints">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvSalesPersonAddState"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:hint="@string/state"
+                                    android:maxLength="50"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/dp20"
+                                    android:text="@={vieModel.state}"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_16" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp20"
+                                    android:layout_height="@dimen/dp20"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/dp10"
+                                    android:layout_marginEnd="@dimen/dp15"
+                                    android:src="@drawable/simple_arrow_down_black" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                                android:layout_weight="1"
+                                android:text="@string/country_"
+                                android:textColor="@color/finter_red"
+                                android:textSize="@dimen/font_14" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginEnd="@dimen/dp15"
+                                android:layout_weight="1"
+                                android:text="@string/pin_code_"
+                                android:textColor="@color/finter_red"
+                                android:textSize="@dimen/font_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp15"
+                                    android:layout_marginEnd="@dimen/dp5"
+                                android:layout_marginBottom="@dimen/dp10"
+                                android:layout_weight="1"
+                                card_view:cardBackgroundColor="@android:color/white"
+                                card_view:cardCornerRadius="8dp"
+                                card_view:cardElevation="4dp"
+                                tools:ignore="MissingConstraints">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:hint="@string/country"
+                                    android:padding="@dimen/dp20"
+                                    android:text="@={vieModel.country}"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_16"
+                                    tools:text="@string/india" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp5"
+                                    android:layout_marginEnd="@dimen/dp15"
+                                android:layout_marginBottom="@dimen/dp10"
+                                android:layout_weight="1"
+                                card_view:cardBackgroundColor="@android:color/white"
+                                card_view:cardCornerRadius="8dp"
+                                card_view:cardElevation="4dp"
+                                tools:ignore="MissingConstraints">
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:hint="@string/pin_code"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"
+                                    android:maxLength="6"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/dp20"
+                                    android:text="@={vieModel.pinCode}"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_16" />
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:background="@color/finter_red"
+                            android:onClick="docPicker"
+                            android:paddingStart="@dimen/dp30"
+                            android:paddingTop="@dimen/dp10"
+                            android:paddingEnd="@dimen/dp30"
+                            android:paddingBottom="@dimen/dp10"
+                            android:text="@string/attachment"
+                            android:textColor="@color/white" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/activity_result_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/length_56"
+                            android:padding="@dimen/offset_2"
+                            android:paddingStart="@dimen/offset_16"
+                            android:paddingEnd="@dimen/offset_16"
+                            tools:listitem="@layout/item_result" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateOnly="true"
+                    android:indeterminateTint="@color/progress_bar_color"
+                    app:gone="@{!vieModel.loading}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:toast="@{vieModel.toastLiveData}" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+</layout>

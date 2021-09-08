@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ef3a25</color>
+    <color name="toolBarColor">#4386F4</color>
+    <color name="colorPrimaryDark">#ef4f25</color>
+    <color name="colorAccent">#ef3a25</color>
+    <color name="finter_red">#ef3a25</color>
+    <color name="finter_black">#383838</color>
+    <color name="finter_gray95">#f2f2f2</color>
+    <color name="bar">#4298AF</color>
+    <color name="bar_dark">#4278AF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#000000</color>
+    <color name="light_Black">#99000000</color>
+    <color name="transparent_gray">#75000000</color>
+    <color name="light_Gray">#DFE0E0</color>
+    <color name="white">#ffffff</color>
+    <color name="Yellow">#FFC402</color>
+    <color name="selected_tab">#55C5FF</color>
+    <color name="tab_background">#16AFFF</color>
+    <color name="purple">#0A0AFA</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="dark_green">#40AD18</color>
+    <color name="dark_gray">#7e7e7e</color>
+    <color name="hintColor">#99888888</color>
+    <color name="very_light_gray">#F2F2F3</color>
+    <color name="book_now">#1295D8</color>
+    <color name="search_car_gray">#DCDCDC</color>
+    <color name="element">#f4f4f4f4</color>
+    <color name="progress_bar_color">#8D8D8D</color>
+    <color name="heading">#686868</color>
+    <color name="status_bar">#F2F5F5</color>
+    <color name="text_color">#8f8f8f</color>
+    <color name="line_color">#cccccc</color>
+    <color name="line_color1">#b1b1b1</color>
+    <color name="current_loc">#239DFF</color>
+    <color name="sort_text">#AAAAAA</color>
+    <color name="filter_text">#575757</color>
+    <color name="filter_text1">#686868</color>
+    <color name="gray_55">#555555</color>
+    <color name="disable_55">#cccccc</color>
+    <color name="dark_disable_55">#e2e2e2</color>
+    <color name="blue_element">#116ea7</color>
+    <color name="blue_element1">#1b77c1</color>
+    <color name="line_color2">#aaaaaa</color>
+    <color name="line_color3">#90e2e2e2</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="transparent_blue">#9955C5FF</color>
+    <color name="colorBackground">#136FA8</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="facebookbackcolor">#1263b5</color>
+    <color name="googlebackcolor">#da4835</color>
+
+
+    <color name="background">#2B292B</color>
+    <color name="background800">#424242</color>
+    <color name="background900">#212121</color>
+    <color name="bug">#179A55</color>
+    <color name="dark">#040706</color>
+    <color name="dragon">#378A94</color>
+    <color name="white_12">#fafafa</color>
+    <color name="white_56">#8effffff</color>
+    <color name="white_70">#b2ffffff</color>
+    <color name="white_87">#ddffffff</color>
+    <color name="white_93">#edf8f8f8</color>
+    <color name="gray_21">#B1A5A5</color>
+    <color name="electric">#E0E64B</color>
+    <color name="fairy">#9E1A44</color>
+    <color name="black_70">#B3000000</color>
+    <color name="skyBlue">#57A8D8</color>
+    <color name="yellow">#FBC02D</color>
+    <color name="fire">#B22328</color>
+    <color name="flying">#90B1C5</color>
+    <color name="ghost">#363069</color>
+    <color name="ice">#7ECFF2</color>
+    <color name="poison">#642785</color>
+    <color name="psychic">#AC296B</color>
+    <color name="rock">#4B190E</color>
+    <color name="steel">#5C756D</color>
+    <color name="water">#2648DC</color>
+    <color name="md_yellow_100">#FFD600</color>
+    <color name="md_yellow_200">#FBC02D</color>
+    <color name="md_amber_700">#FFA000</color>
+    <color name="md_orange_100">#FFA726</color>
+    <color name="md_orange_200">#FF6D00</color>
+    <color name="md_green_100">#81C784</color>
+    <color name="md_green_200">#388E3C</color>
+    <color name="fighting">#9F422A</color>
+    <color name="grass">#007C42</color>
+    <color name="ground">#AD7235</color>
+    <color name="md_blue_100">#81D4fA</color>
+    <color name="md_blue_200">#0091EA</color>
+
+    <color name="yellow_middle">#ffee58</color>
+    <color name="yellow_end">#7ae7de83</color>
+    <color name="colorGrayLight">#9f9f9f</color>
+
+    <color name="finter_basic_background_color">#F9F9F9</color>
+
+    <color name="item_recycleview_text">#B8B8B8</color>
+
+    <color name="black_overlay_new">#99000000</color>
+
+    <color name="ucrop_color_toolbar">@color/finter_red</color>
+    <color name="ucrop_color_statusbar">@color/finter_red</color>
+    <color name="ucrop_color_widget_active">@color/finter_red</color>
+    <color name="ucrop_color_toolbar_widget">#fff</color>
+
+    <color name="dialog_choose_icon_color">#757575</color>
+    <color name="dialog_choose_text_color">#757575</color>
+    <color name="oper_text_color">#1db7bd</color>
+    <color name="equl_text_color">#ffffff</color>
+    <color name="main_backg_color">#ffffff</color>
+    <color name="input_backg_color">#ffffff</color>
+</resources>
